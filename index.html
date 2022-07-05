@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>AR.js & html-shader demo</title>
-</head>
 
-<body>
-  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-  <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
-
-  <!-- テクスチャの中身を描画する要素。 -->
-  <div id="target">
-    <div class="item-image"><img src="./referlion.jpg" /></div>
-    <div class="item-marquee">ブラウザでARが動くんだお〜</div>
-  </div>
-
-  <!-- AR コンテンツの定義。 -->
-  <a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
-    <a-marker preset="custom" type="pattern" url="pattern-marker.patt">
-      <a-box position="0 0.6 0"></a-box>
-
-      <a-plane position="0 0.6 0.51" width="1.0" height="1.0" material="shader:html;target:#target;fps:24;width:640;height:640"></a-plane>
+<html class=""
+      ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sample</title>
+    <body style="margin: 0px 0px 0px 126.5px; overflow: hidden;">
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+    <a-scene embedded="" arjs="trackingMethod:best; debugUIEnabled:false;" class="" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+      <a-marker preset="hiro" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+        <a-box position="0 0.8 0" wireframe="false" color="#843233" rotation="" scale="" visible="" material="" geometry="" src="" width="0.7" height="0.7" depth="0.7" >
+          <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+        </a-box>
     </a-marker>
-
-    <a-entity camera></a-entity>
+    <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
+    <canvas class="a-canvas" data-aframe-canvas="true"></canvas>
+    <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+    <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
   </a-scene>
-
-  <script src="./index.js"></script>
 </body>
-
 </html>
